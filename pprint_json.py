@@ -3,20 +3,21 @@ import os
 from pprint import pprint
 
 
-filename = 'alco_shops.json'
+json_filename = 'alco_shops.json'
 
 
-def load_data_json(filename):
-    if not os.path.exists(filename):
+def load_data_json(json_filename):
+    if not os.path.exists(json_filename):
         return None
-    with open (filename, 'r', encoding='utf-8') as json_file:
+    with open (json_filename, 'r', encoding='utf-8') as json_file:
         return json.load(json_file)
 
 
-def pretty_print_json(filename):
-    return pprint(data)
+def pretty_print_json(json_filename):
+    return pprint(json_content)
 
 
 if __name__ == '__main__':
-    data = load_data_json(input('Введите название/адрес файл: '))
-    pretty_print_json(data)
+    json_content = load_data_json(input('Введите название/адрес файл: '))
+    pretty_print_json(json_content)
+    

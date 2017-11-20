@@ -9,15 +9,6 @@ To run the script:
 $ python pprint_json.py [alco_shops.json]
 ```
 
-In case the file does not exist, the script will return:
-
-```python
-      if not os.path.exists(filepath):
-        return None
-```
-
-
-
 # Example of result
 ```python
 python pprint_json.py example.json

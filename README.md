@@ -12,7 +12,7 @@ $ python pprint_json.py [alco_shops.json]
 In case the file does not exist, the script will return:
 
 ```python
-      if not os.path.exists(filename):
+      if not os.path.exists(filepath):
         return None
 ```
 
@@ -20,25 +20,45 @@ In case the file does not exist, the script will return:
 
 # Example of result
 ```python
-                                                              {'DayOfWeek': 'пятница',
-                                                               'Hours': '09:00-22:00'},
-                                                              {'DayOfWeek': 'суббота',
-                                                               'Hours': '09:00-22:00'},
-                                                              {'DayOfWeek': 'воскресенье',
-                                                               'Hours': '09:00-22:00'}],
-                                             'global_id': 25173101},
-                              'DatasetId': 1854,
-                              'ReleaseNumber': 2,
-                              'RowId': '4cfabe8c-1eea-4dc2-81a0-99ddb0ff3e35',
-                              'VersionNumber': 1},
-               'type': 'Feature'},
-              {'geometry': {'coordinates': [37.521364353495464,
-                                            55.541676236353744],
-                            'type': 'Point'},
-               'properties': {'Attributes': {'Address': 'улица Адмирала '
-                                                        'Лазарева, дом 43',
-                                             'AdmArea': 'Юго-Западный '
-                                                        'административный '
+python pprint_json.py example.json
+[
+    {
+        "Number": 1,
+        "Cells": {
+            "ClarificationOfWorkingHours": null,
+            "Address": "улица Академика Павлова, дом 10",
+            "TypeService": "реализация продовольственных товаров",
+            "IsNetObject": "да",
+            "WorkingHours": [
+                {
+                    "Hours": "09:30-22:30",
+                    "DayOfWeek": "понедельник"
+                },
+                {
+                    "Hours": "09:30-22:30",
+                    "DayOfWeek": "вторник"
+                },
+                {
+                    "Hours": "09:30-22:30",
+                    "DayOfWeek": "среда"
+                },
+                {
+                    "Hours": "09:30-22:30",
+                    "DayOfWeek": "четверг"
+                },
+                {
+                    "Hours": "09:30-22:30",
+                    "DayOfWeek": "пятница"
+                },
+                {
+                    "Hours": "09:30-22:30",
+                    "DayOfWeek": "суббота"
+                },
+                {
+                    "Hours": "09:30-22:30",
+                    "DayOfWeek": "воскресенье"
+                }
+            ]                                                          
 ```
 
 # Project Goals

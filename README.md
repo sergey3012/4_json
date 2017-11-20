@@ -4,7 +4,11 @@ This script on the input takes the path to a file with arbitrary data in JSON fo
 
 # Quickstart
 
-To run the script, click Run, then specify the file name or path to it.
+To run the script:
+```
+$ python pprint_json.py [alco_shops.json]
+```
+
 In case the file does not exist, the script will return:
 
 ```python
@@ -12,7 +16,7 @@ In case the file does not exist, the script will return:
         return None
 ```
 
-$ python pprint_json.py <path to file>
+
 
 # Example of result
 ```python

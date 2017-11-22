@@ -6,7 +6,7 @@ This script on the input takes the path to a file with arbitrary data in JSON fo
 
 To run the script:
 ```
-$ python pprint_json.py [alco_shops.json]
+$ python pprint_json.py <path to file>
 ```
 
 # Example of result

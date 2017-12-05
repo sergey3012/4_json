@@ -1,5 +1,4 @@
 import json
-import sys
 
 
 def load_data_json(filepath):
@@ -8,19 +7,16 @@ def load_data_json(filepath):
 
 
 def pretty_print_json(json_data):
-    return print(json.dumps(json_data, ensure_ascii=False, indent=4, sort_keys=False))
+    return print(json.dumps(json_data, ensure_ascii=False, indent=4, sort_keys=True))
 
 
 if __name__ == '__main__':
-    if len(sys.argv) != 2:
-        print('\nУкажите файл в формате json.\n'
-              'python test.py <path to file>')
-        exit()
     try:
-        pretty_json = pretty_print_json(load_data_json(sys.argv[1]))
-        print(pretty_json)
+        filepath = input('Введите адрес файла: ')
     except (FileNotFoundError, PermissionError) as ex:
-        print('\nОшибка доступа: файл не существует '
-              'или недоступен для чтения.\n' + str(ex))
+        print('Ошибка доступа: файл не существует ')
     except ValueError as ex:
-        print('\nОшибка json данных!\n' + str(ex))
+        print('Ошибка json данных!')
+    finally:
+        pretty_json = pretty_print_json(load_data_json(filepath))
+        pretty_print_json(pretty_json)
